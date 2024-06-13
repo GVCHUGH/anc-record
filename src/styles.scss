@@ -1,1 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #86ac1f;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .heading{
+    h2{
+        font-size: 1.5rem;
+        color: #212529;
+    }
+}
+.btn{
+    &-primary{
+        background-color: #86ac1f;
+        border-color: #86ac1f;
+        &:hover{
+            background-color: darken($color: #86ac1f, $amount: 5);
+        }
+        &:focus{
+            background-color: darken($color: #86ac1f, $amount: 5);
+        }
+        &:active{
+            background-color: darken($color: #86ac1f, $amount: 5);
+            border-color: #86ac1f;
+        }
+        &:focus-visible{
+            box-shadow: none !important;
+            background-color: darken($color: #86ac1f, $amount: 5);
+        }
+    }
+    &-sm{
+        border: none;
+        transition: all ease-in-out 0.5s;
+        &:hover{
+            transform: scale(1.1);
+            transition: all ease-in-out 0.5s;
+        }
+        &--edit{
+            color: #86ac1f;
+            &:focus, &:active{
+                border: none;
+                color: #86ac1f;
+            }
+            }
+            &--delete{
+                color: red;
+                &:focus, &:active{
+                    border: none;
+                    color: red;
+                }
+        }
+    }
+}
+.data{
+    margin-top: 10px;
+    thead{
+        tr{
+            th{
+                background-color: #86ac1f;
+                color: #fff;
+                &:first-child{
+                    border-radius: 5px 0 0 0;
+                }
+                &:last-child{
+                    border-radius: 0 5px 0 0;
+                }
+            }
+        }
+    }
+    .table-responsive{
+        max-height: 77dvh;
+        overflow: auto;
+        .table{
+            margin: 0;
+            tbody{
+                tr{
+                    td{
+                        vertical-align: middle;
+                        font-size: 0.875rem;
+                        color: #212529;
+                        .detail{
+                            i{
+                                color: #86ac1f;
+                            }
+                            span{}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

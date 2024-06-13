@@ -1,0 +1,17 @@
+.navbar{
+    padding: 0;
+    .nav{
+        width: 100%;
+        height: 100dvh;
+        &-item{
+            width: 100%;
+            padding: 10px 0;
+            &:not(:last-child){
+                border-bottom: 1px solid #dfdede;
+            }
+        }
+        &-link{
+            color: #fff;
+        }
+    }
+}
