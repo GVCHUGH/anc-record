@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'anc-record';
+
+  showNavbar :boolean = false;
+  menuToggler(){
+    this.showNavbar = !this.showNavbar;
+  }
 }

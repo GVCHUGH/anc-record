@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
 
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
   }
   
   /* Track */
@@ -23,7 +31,7 @@
 
   .heading{
     h2{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: #212529;
     }
 }
@@ -86,7 +94,7 @@
         }
     }
     .table-responsive{
-        max-height: 77dvh;
+        max-height: 79dvh;
         overflow: auto;
         .table{
             margin: 0;
@@ -108,11 +116,4 @@
         }
     }
 }
-/* Importing Bootstrap SCSS file. */
-@import "./node_modules/bootstrap/scss/bootstrap";
 
-/* Importing Datepicker SCSS file. */
-@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,12 +1,15 @@
-<!-- <router-outlet></router-outlet> -->
 <div class="header-section">
-  <app-header></app-header>
+    <div class="h-100 d-flex align-items-center justify-content-between px-3">
+        <i class="fa-solid fa-bars" (click)="menuToggler()"></i>
+        <h2 class="m-0">Record</h2>
+        <div></div>
+    </div>
 </div>
 <div class="d-flex">
- <div class="nav-section">
-     <app-navbar></app-navbar>
- </div>
- <div class="main-content">
-     <router-outlet></router-outlet>
- </div>
+    <div class="nav-section" [ngClass]="showNavbar ? 'show__nav' : ''">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
 </div>

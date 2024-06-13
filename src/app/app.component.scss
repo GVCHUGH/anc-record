@@ -2,12 +2,26 @@
     height: 60px;
     background-color: #fff;
     box-shadow: 0 2px 6px #0000004a;
+    i{
+        cursor: pointer;
+    }
+    h2{
+        font-size: 1.5rem;
+        color: #212529;
+    }
 }
 .nav-section{
     width: 220px;
     background-color: #86ac1f;
+    position: absolute;
+    left: -220px;
+    transition: all ease-in-out 0.5s;
 }
 .main-content{
-    width: calc(100% - 220px);
+    width: calc(100%);
     padding: 15px;
+}
+.show__nav{
+    left: 0;
+    transition: all ease-in-out 0.5s;
 }
