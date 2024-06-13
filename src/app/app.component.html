@@ -9,11 +9,8 @@
     <div class="nav-section" [ngClass]="showNavbar ? 'show__nav' : ''">
         <div class="navbar">
             <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/all-anc">All ANC</a>
+                <li class="nav-item" *ngFor="let item of navList" (click)="menuToggler()" [routerLink]="item.route">
+                    <a class="nav-link">{{item.navItem}}</a>
                 </li>
             </ul>
         </div>

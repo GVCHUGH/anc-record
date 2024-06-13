@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'anc-record';
 
+  navList = [
+    {navItem: 'Dashboard', route: '/'},
+    {navItem: 'All ANC', route: '/all-anc'},
+    {navItem: 'All HBNC', route: '/all-hbnc'},
+  ];
+
   showNavbar :boolean = false;
   menuToggler(){
     this.showNavbar = !this.showNavbar;

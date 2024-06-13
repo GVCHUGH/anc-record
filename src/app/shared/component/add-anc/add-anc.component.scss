@@ -1,0 +1,53 @@
+.popup{
+    width: 340px;
+    &--title{
+        padding: 10px 20px;
+        background-color: #e7e7e7;
+        height: 50px;
+        h2{
+            font-size: 1.25rem;
+        }
+        i{
+            cursor: pointer;
+        }
+    }
+    &--body{
+        padding: 10px;
+        max-height: 75dvh;
+        overflow: auto;
+        .inp-field{
+            label{
+                font-size: 0.875rem;
+                color: #212529;
+                margin: 10px 0 0 0;
+            }
+            input{
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+        .legend-area{
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 5px 0 15px 0;
+            .legend{
+                background-color: #fff;
+                top: -10px;
+                left: 8px;
+                font-size: 0.875rem;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+.warning-msg{
+    font-size: 0.75rem;
+    right: 0;
+    color: red;
+}
+.star{
+    font-size: 0.875rem;
+    color: red;
+}

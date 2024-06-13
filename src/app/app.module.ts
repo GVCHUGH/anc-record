@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { AllAncComponent } from './modules/all-anc/all-anc.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AllHbncComponent } from './modules/all-hbnc/all-hbnc.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllAncComponent,
-    DashboardComponent
+    DashboardComponent,
+    AllHbncComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddAncComponent } from 'src/app/shared/component/add-anc/add-anc.component';
 
 @Component({
   selector: 'app-all-anc',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AllAncComponent {
 
+  constructor(
+    private dialog : MatDialog
+  ){}
+
+  addAnc(){
+    this.dialog.open(AddAncComponent)
+  }
 }
