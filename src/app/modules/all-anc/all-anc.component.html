@@ -19,48 +19,48 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of [1,2,3,4,5,6]; let i = index">
+                <tr *ngFor="let item of ancList; let i = index">
                     <td style="width: 6%;" class="text-center">{{i + 1}}</td>
                     <td style="width: 12%;">
-                        Kajal w/o Gaurav <br>
-                        (7897897897897897)
+                        {{item.name}} w/o {{item.husband_name}} <br>
+                        {{(item.PCTS_No)}}
                     </td>
                     <td class="text-center" style="width: 10%;">
-                        12/12/2024
+                        {{item.lmp_date}}
                     </td>
                     <td style="width: 16%;">
                         <div class="detail mb-1">
                             <i class="fa-solid fa-phone me-1"></i>
-                            <span>8949770036</span>
+                            <span>{{item.phone_no}}</span>
                         </div>
                         <div class="detail mb-1">
                             <i class="fa-solid fa-file me-2"></i>
-                            <span>0931001000454542</span>
+                            <span>{{item.account_no}}</span>
                         </div>
                         <div class="detail">
                             <i class="fa-regular fa-address-card me-1"></i>
-                            <span>456789456456</span>
+                            <span>{{item.aadhar_no}}</span>
                         </div>
                     </td>
                     <td style="width: 12%;">
-                        Date - 12/02/2025 <br>
-                        HB - 12 <br>
-                        Weight - 52
+                        Date - {{item.first_anc}} <br>
+                        HB - {{item.first_hb}} <br>
+                        Weight - {{item.first_weight}}
                     </td>
                     <td style="width: 12%;">
-                        Date - 12/02/2025 <br>
-                        HB - 12 <br>
-                        Weight - 52
+                        Date - {{item.second_anc}} <br>
+                        HB - {{item.second_hb}} <br>
+                        Weight - {{item.second_weight}}
                     </td>
                     <td style="width: 12%;">
-                        Date - 12/02/2025 <br>
-                        HB - 12 <br>
-                        Weight - 52
+                        Date - {{item.third_anc}} <br>
+                        HB - {{item.third_hb}} <br>
+                        Weight - {{item.third_weight}}
                     </td>
                     <td style="width: 12%;">
-                        Date - 12/02/2025 <br>
-                        HB - 12 <br>
-                        Weight - 52
+                        Date - {{item.forth_anc}} <br>
+                        HB - {{item.forth_hb}} <br>
+                        Weight - {{item.forth_weight}}
                     </td>
                     <td style="width: 8%;">
                         <div class="d-flex">

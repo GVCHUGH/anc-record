@@ -8,6 +8,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AllHbncComponent } from './modules/all-hbnc/all-hbnc.component';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
