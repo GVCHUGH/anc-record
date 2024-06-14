@@ -9,37 +9,46 @@
                 <div class="col-md-6">
                     <div class="inp-field position-relative">
                         <label for="">PCTS No <span class="star">*</span></label>
-                        <input type="text" class="form-control" formControlName="PCTS_No" maxlength="16">
+                        <input type="text" class="form-control" formControlName="PCTS_No" maxlength="16" appNumericOnly>
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('PCTS_No')?.errors?.['required'] && ancForm.get('PCTS_No')!.touched">Required</div>
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('PCTS_No')?.errors?.['minlength'] && ancForm.get('PCTS_No')!.touched">min length 16</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inp-field position-relative">
                         <label for="">Name <span class="star">*</span></label>
                         <input type="text" class="form-control" formControlName="name">
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('name')?.errors?.['required'] && ancForm.get('name')!.touched">Required</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inp-field position-relative">
                         <label for="">Husband Name <span class="star">*</span></label>
                         <input type="text" class="form-control" formControlName="husband_name">
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('husband_name')?.errors?.['required'] && ancForm.get('husband_name')!.touched">Required</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inp-field position-relative">
                         <label for="">LMP Date <span class="star">*</span></label>
                         <input type="date" class="form-control" formControlName="lmp_date">
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('lmp_date')?.errors?.['required'] && ancForm.get('lmp_date')!.touched">Required</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inp-field position-relative">
                         <label for="">Phone No <span class="star">*</span></label>
-                        <input type="text" class="form-control" formControlName="phone_no" maxlength="10">
+                        <input type="text" class="form-control" formControlName="phone_no" maxlength="10" appNumericOnly>
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('phone_no')?.errors?.['required'] && ancForm.get('phone_no')!.touched">Required</div>
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('phone_no')?.errors?.['minlength'] && ancForm.get('phone_no')!.touched">min length 10</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inp-field position-relative">
                         <label for="">Aadhar No <span class="star">*</span></label>
-                        <input type="text" class="form-control" formControlName="aadhar_no">
+                        <input type="text" class="form-control" formControlName="aadhar_no" maxlength="12" appNumericOnly>
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('aadhar_no')?.errors?.['required'] && ancForm.get('aadhar_no')!.touched">Required</div>
+                        <div class="position-absolute warning-msg" *ngIf="ancForm.get('aadhar_no')?.errors?.['minlength'] && ancForm.get('aadhar_no')!.touched">min length 12</div>
                     </div>
                 </div>
                 <div class="col-md-6">

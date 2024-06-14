@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -10,12 +10,38 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class AddAncComponent {
 
   ancForm! : FormGroup;
+
+  ngOnInit(){
+    this.ancForm = new FormGroup({
+      'PCTS_No' : new FormControl(null, [Validators.required, Validators.maxLength(16), Validators.minLength(16)]),
+      'name' : new FormControl(null, Validators.required),
+      'husband_name' : new FormControl(null, Validators.required),
+      'lmp_date' : new FormControl(null, Validators.required),
+      'phone_no' : new FormControl(null, [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
+      'aadhar_no' : new FormControl(null, Validators.required),
+      'account_no' : new FormControl(null),
+      'first_anc' : new FormControl(null),
+      'first_hb' : new FormControl(null),
+      'first_weight' : new FormControl(null),
+      'second_anc' : new FormControl(null),
+      'second_hb' : new FormControl(null),
+      'second_weight' : new FormControl(null),
+      'third_anc' : new FormControl(null),
+      'third_hb' : new FormControl(null),
+      'third_weight' : new FormControl(null),
+      'forth_anc' : new FormControl(null),
+      'forth_hb' : new FormControl(null),
+      'forth_weight' : new FormControl(null),
+    })
+  }
   
   constructor (
     private dialogRef : MatDialogRef<AddAncComponent>
   ){}
 
-  addANC(){}
+  addANC(){
+    console.log(this.ancForm.value)
+  }
 
   toClose(){
     this.dialogRef.close();
