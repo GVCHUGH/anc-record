@@ -37,6 +37,18 @@ export class AllAncComponent {
   }
 
   addAnc(){
-    this.dialog.open(AddAncComponent)
+    this.dialog.open(AddAncComponent).afterClosed().subscribe((res:any) => {
+      this.getAncData()
+    })
+  }
+
+  toUpdate(value:any){
+    this.dialog.open(AddAncComponent, {
+      data: {
+        id: value
+      }
+    }).afterClosed().subscribe((res:any) => {
+      this.getAncData()
+    })
   }
 }
